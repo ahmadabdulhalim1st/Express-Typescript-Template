@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { validate } from "@lib/middlewares/validation";
-import { signUpSchema, signInSchema, signOutSchema, forgetPasswordSchema, resetPassworSchema } from "@lib/validators/user.validator";
+import { validate } from "@common/middlewares/validation";
+import { signUpSchema, signInSchema, signOutSchema, forgetPasswordSchema, resetPassworSchema } from "@common/validators/user.validator";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "@lib/better-auth/auth";
 const router: Router = Router();

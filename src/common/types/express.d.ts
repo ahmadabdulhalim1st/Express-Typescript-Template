@@ -1,5 +1,5 @@
 import type { Request } from "express";
-import RequestValidators from "@lib/middlewares/validation";
+import RequestValidators from "@common/middlewares/validation";
 declare global {
   namespace Express {
     interface Request {

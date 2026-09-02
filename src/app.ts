@@ -3,7 +3,7 @@ import helmet from "helmet";
 import cors from "cors";
 import hpp from "hpp";
 import { corsOptions } from "@config/cors.origins";
-import { errorHandler, notFoundHandler } from "@lib/middlewares/errorHandler";
+import { errorHandler, notFoundHandler } from "@common/middlewares/errorHandler";
 import { authRouter } from "@routes";
 export const app = express();
 app.set("trust proxy", 1);

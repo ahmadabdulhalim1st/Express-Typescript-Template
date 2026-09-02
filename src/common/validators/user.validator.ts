@@ -1,4 +1,4 @@
-import { userBase, passwordSchema } from "@lib/validators/base.validator";
+import { userBase, passwordSchema } from "@common/validators/base.validator";
 import * as z from "zod";
 
 export const signUpSchema = userBase

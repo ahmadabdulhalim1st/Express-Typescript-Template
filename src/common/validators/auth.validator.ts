@@ -1,4 +1,4 @@
-import { userBase, queryBase } from "@lib/validators/base.validator";
+import { userBase, queryBase } from "@common/validators/base.validator";
 import * as z from "zod";
 const booleanFromString = z.enum(["true", "false"]).transform((value) => value === "true");
 export const userQuerySchema = queryBase.extend({
