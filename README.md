@@ -1,34 +1,35 @@
-express-ts-mongoose-auth/
-├── src/
-│ ├── config/
-│ │ ├── database.ts
-│ │ └── env.ts
-│ │
-│ ├── lib/
-│ │ └── auth.ts
-│ │
-│ ├── middleware/
-│ │ ├── auth.middleware.ts
-│ │ ├── error.middleware.ts
-│ │ └── not-found.middleware.ts
-│ │
-│ ├── modules/
-│ │ └── user/
-│ │ ├── user.controller.ts
-│ │ ├── user.model.ts
-│ │ ├── user.routes.ts
-│ │ ├── user.service.ts
-│ │ └── user.validation.ts
-│ │
-│ ├── routes/
-│ │ └── index.ts
-│ │
-│ ├── app.ts
-│ └── server.ts
+# Express TypeScript Starter API
+
+A production-ready, modular REST API template built with **Express**, **TypeScript**, **Mongoose (MongoDB)**, **Redis**, and **Better Auth**.
+
+---
+
+## 🏗️ Folder Structure
+
+```text
+src/
+├── common/             # Shared utilities, middlewares, types, and validators
+│   ├── middlewares/    # Express global middlewares (auth, rate limits, errors)
+│   ├── types/          # Global TypeScript definitions & Express request overrides
+│   ├── utils/          # Helper functions and standardized API response tools
+│   └── validators/     # Shared Zod validation schemas
 │
-├── .env
-├── .env.example
-├── .gitignore
-├── package.json
-├── tsconfig.json
-└── README.md
+├── config/             # Application environment & configuration constants
+│   ├── constants/      # App-wide static constants & status codes
+│   ├── cors.origins.ts # CORS allowed origins & settings
+│   └── env.ts          # Zod-validated process.env definitions
+│
+├── database/           # Connection drivers and database settings
+│   ├── mongodb.ts      # Mongoose MongoDB connection lifecycle
+│   ├── options.ts      # Mongo connection driver settings
+│   └── redis.ts        # ioredis client initialization
+│
+├── lib/                # Third-party integrations & library setups
+│   └── auth.ts         # Better Auth instance & Mongoose adapter integration
+│
+├── modules/            # Feature-driven domain modules
+│   └── auth/           # Auth controllers, services, and route definitions
+│
+├── routes/             # Express API route registry
+├── app.ts              # Express application setup & middleware assembly
+└── server.ts           # HTTP server startup & database initialization
